@@ -1,0 +1,27 @@
+Crear un programa que determine el sueldo que recibira un empleado, en concepto de horas extras trabajadas. Cada hora normal se pagará a 40 pesos.
+Si las horas trabajadas semanales, exceden 48, el resto se considerará hora extras, y estas se pagaran el doble de una hora normal.
+Si las horas extras excenden de 48, las primeras 8 se pagan al doble y el resto al triple.
+
+Requisitos
+1- La aplicación tiene que calcular las horas de 0 a 40 a precio 40 pesos/hora
+2- La aplicación tiene que calcular las horas de 41 hasta 48 a 80 pesos/horas
+3- La aplicación tiene que calcular las horas a partir de 49 horas a 120 pesos/hora.
+
+Casos prueba
+
+Scenario: Validar que al ingresar cantidad de horas trabajadas 20 se calcule con tarifa normal
+1- Ingresar cantidad de horas trabajadas por trabajador
+Validar cantidad de salario a horas normal
+
+Scenario: Validar que al ingresar cantidad de horas extras trabajas 43 se calcule las primeras 40 horas normal y las restantes 3 como horas extras
+Validar suma de salario normal mas horas extra
+
+Scenario: Validar que el sistema no devuelva resultado al ingresar texto en vez de números
+
+Scenario: Validar que al ingresar horas extra se calculen como horas normales
+
+Scenario: Validar que al ingresar horas en negativo el sistema alerte
+
+Scenario: Validar que se calculen de forma incorrecta todas las horas ingresadas como extras
+
+Scenario : Validar que al ingresar cantidad de horas por encima de 49 se calcule las primeras 40 coomo normal, las 7 restantes doble y 1 triple
