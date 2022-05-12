@@ -22,7 +22,7 @@ public class Main {
 
                 JOptionPane.showMessageDialog(null, "Las horas extras hechas son: " + cantHorasExtras + "\nEl pago por las horas extras es: " + pagoHorasExtras + "\nEl salario total es: " + salario);
             } catch (Exception ex) {
-                JOptionPane.showMessageDialog(null, ex.getMessage());
+                JOptionPane.showMessageDialog(null, "ERROR - " + ex.getMessage());
             }
 
             String[] opcion = {"SI", "NO"};
