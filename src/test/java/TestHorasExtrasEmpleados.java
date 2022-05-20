@@ -3,7 +3,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TestHorasExtrasEmpleados {
-    @Test
+    @Test//(expected = Exception.class)
     public void TestCalculoSalario_01() throws Exception {
         Empleado empleado = new Empleado();
         double salario = empleado.CalcularSalario(40);
@@ -15,6 +15,22 @@ public class TestHorasExtrasEmpleados {
         Empleado empleado = new Empleado();
         double salario = empleado.CalcularSalario(42);
         double valorEsperado = 1760;
+        assertEquals(valorEsperado, salario);
+    }
+
+    @Test
+    public void TestCalculoSalario_03() throws Exception {
+        Empleado empleado = new Empleado();
+        double salario = empleado.CalcularSalario(39);
+        double valorEsperado = 1560;
+        assertEquals(valorEsperado, salario);
+    }
+
+    @Test
+    public void TestCalculoSalario_04() throws Exception {
+        Empleado empleado = new Empleado();
+        double salario = empleado.CalcularSalario(50);
+        double valorEsperado = 2800;
         assertEquals(valorEsperado, salario);
     }
 }
