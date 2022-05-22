@@ -23,9 +23,9 @@ public class TestHorasExtrasEmpleados {
     }
 
     @Test
-    public void TestCalculoSalario_ExceptionPorTexto() throws Exception {
+    public void TestCalculoSalario_ExceptionPorTexto(){
         Empleado empleado = new Empleado();
-        assertThrows(NumberFormatException.class, () -> empleado.CalcularSalario(Double.parseDouble("48a")));
+        assertThrows(Exception.class, () -> empleado.CalcularSalario(Double.parseDouble("48a")));
     }
 
 }
