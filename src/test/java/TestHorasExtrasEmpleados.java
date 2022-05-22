@@ -1,36 +1,31 @@
 import bios.testing.Empleado;
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import java.util.InputMismatchException;
+
+import static org.junit.Assert.assertThrows;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class TestHorasExtrasEmpleados {
-    @Test//(expected = Exception.class)
-    public void TestCalculoSalario_01() throws Exception {
+    @Test
+    public void TestCalculoSalario_20Horas() throws Exception {
         Empleado empleado = new Empleado();
-        double salario = empleado.CalcularSalario(40);
-        double valorEsperado = 1600;
+        double salario = empleado.CalcularSalario(20);
+        double valorEsperado = 800;
         assertEquals(valorEsperado, salario);
     }
     @Test
-    public void TestCalculoSalario_02() throws Exception {
+    public void TestCalculoSalario_43Horas() throws Exception {
         Empleado empleado = new Empleado();
-        double salario = empleado.CalcularSalario(42);
-        double valorEsperado = 1760;
+        double salario = empleado.CalcularSalario(43);
+        double valorEsperado = 1840;
         assertEquals(valorEsperado, salario);
     }
 
     @Test
-    public void TestCalculoSalario_03() throws Exception {
+    public void TestCalculoSalario_ExceptionPorTexto() throws Exception {
         Empleado empleado = new Empleado();
-        double salario = empleado.CalcularSalario(39);
-        double valorEsperado = 1560;
-        assertEquals(valorEsperado, salario);
+        assertThrows(NumberFormatException.class, () -> empleado.CalcularSalario(Double.parseDouble("48a")));
     }
 
-    @Test
-    public void TestCalculoSalario_04() throws Exception {
-        Empleado empleado = new Empleado();
-        double salario = empleado.CalcularSalario(50);
-        double valorEsperado = 2800;
-        assertEquals(valorEsperado, salario);
-    }
 }

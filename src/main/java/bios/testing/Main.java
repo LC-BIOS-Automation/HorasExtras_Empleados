@@ -21,8 +21,9 @@ public class Main {
                 salario = emp.CalcularSalario(horas);
 
                 JOptionPane.showMessageDialog(null, "Las horas extras hechas son: " + cantHorasExtras + "\nEl pago por las horas extras es: " + pagoHorasExtras + "\nEl salario total es: " + salario);
-            } catch (Exception ex) {
-                JOptionPane.showMessageDialog(null, "ERROR - " + ex.getMessage());
+
+            } catch (Exception e) {
+                JOptionPane.showMessageDialog(null, e.getMessage());
             }
 
             String[] opcion = {"SI", "NO"};

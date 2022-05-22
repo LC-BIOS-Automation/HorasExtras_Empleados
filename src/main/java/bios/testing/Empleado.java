@@ -55,9 +55,10 @@ public class Empleado {
                 salario = ((horas - horasExtras) * valorHora) + ((horas - 40) * valorHora * 3);
             }
         } catch (Exception e) {
-            throw new Exception("Ha ocurrido un error - " + e.getMessage());
+            throw new Exception("ERROR");
         }
 
         return salario;
     }
+
 }
